@@ -1,5 +1,5 @@
 # dj-blog
-Before beginning:
+Required settings:
 -	Install git
 -	Open CMD and type 'git --version'  - if git isn't recognized… add git to path!
 -	Clone git repository
@@ -7,3 +7,4 @@ Before beginning:
 -	Install Django 'pip install Django' in venv
 
 -	Pip install python libraries you'll need...
+
