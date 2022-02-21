@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+Hello again, {{ user.username|default:'Guest' }}!
+What would you like to do?
+
+<div>
+    {% if user.is_authenticated %}
+		<ul class="list-group">
+		  <li class="list-group-item"><a href="{% url 'password_change' %}">Change password</a></li>
+		  <li class="list-group-item"><a href="{% url 'logout' %}">Logout</a></li>
+		</ul>
+    {% else %}
+        <ul class="list-group">
+		  <li class="list-group-item"><a href="{% url 'login' %}">Login</a></li>
+		  <li class="list-group-item"><a href="{% url 'register' %}">Sign up</a></li>
+		</ul>
+    {% endif %}
+</div>
+{% endblock %}
